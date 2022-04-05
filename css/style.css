@@ -1,0 +1,455 @@
+
+@font-face {
+    font-family: 'popins';
+    src: url(../assets/fonts/Poppins-Medium.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    list-style: none;
+    color: #1e1e1e;
+}
+body{
+    font-family: 'popins';
+}
+main{
+    background-image: url('../assets/img/fondoIndex.png');
+    /* background-size: 100%; */
+    height: 100%;
+    width: 100%;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+label{
+    font-size: 18px;
+}
+
+/* Barra de navegacion */
+
+.navbar{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+    justify-content: space-around;
+    height: 12vh;
+    padding: 10px;
+    font-size: 12px;
+    background-image: radial-gradient( circle 610px at 5.2% 51.6%,  #152c48 0%, #1959a7 97.5% );
+}
+.navbar .logo{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    padding-left: 10px;
+    width: 120px;
+    grid-column: 1/3;
+    grid-row: 1/5;
+    }
+.navbar .logoZoom{
+    animation-name: logo;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    transform-origin: 50% 50%;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    width: 120px;
+    grid-column: 1/3;
+    grid-row: 1/5;
+}
+.navbar .menu{
+    display: flex;
+    justify-content: space-around;
+    grid-column: 3/10;
+    grid-row: 1/4;
+}
+.navbar .menuUsuario{
+    display: flex;
+    justify-content: space-around;
+    grid-column: 11/13;
+    grid-row: 1/4;
+}
+.navbar .menuUsuario a{
+    text-decoration: none;
+    color: white;
+}
+.navbar .menuUsuario a:hover{
+    text-decoration: none;
+    text-transform: uppercase;
+    border: solid 1px;
+    padding: 5px;
+    border-radius: 15px;
+    transition: .3s;
+    background-color: rgb(255, 255, 255);
+    color: #1a5aa8;
+    box-shadow: 5px 5px 37px black;
+}
+.navbar .menu a{
+    color: white;
+    text-decoration: none;
+}
+.navbar .menu a:hover{
+    text-decoration: none;
+    text-transform: uppercase;
+    border: solid 1px;
+    padding: 5px;
+    border-radius: 15px;
+    transition: .3s;
+    background-color: white;
+    color: #1a5aa8;
+    box-shadow: 5px 5px 37px black;
+}
+.navbar .menu-bar{
+    display: flex;
+    grid-column: 12/13;
+    display: none;
+}
+.navbar .menu-user{
+    display: flex;
+    grid-column: 12/13;
+    display: none;
+}
+.navbar .menu-reg{
+    display: flex;
+    grid-column: 12/13;
+    display: none;
+}
+/* Index-Principal */
+
+.principal{
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+.principal .contenido{
+    grid-column: 2/5;
+    grid-row: 2/7;
+}
+.principal h1{
+    font-size: 40px;
+    text-decoration: underline;
+}
+.principal h2{
+    font-size: 20px;
+    padding: 5px 0 20px;
+}
+.principal .crear{
+    font-family: 'popins';
+    font-size: 16px;
+    font-weight: 500;
+    border: solid 2px;
+    margin: 12px;
+    border-radius: 10px;
+    padding: 3px;
+    cursor: pointer;
+}
+.principal .unirse{
+    font-family: 'popins';
+    font-size: 16px;
+    font-weight: 500;
+    border: solid 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 12px;
+    padding: 3px;
+}
+
+/* Formularios */
+
+.grillaFormulario{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+.grillaFormulario .form{
+    grid-column: 2/4;
+    grid-row: 4/12;
+}
+.grillaFormulario .tituloFormulario{
+    grid-column: 2/4;
+    grid-row: 1/2;
+}
+.grillaFormulario .subtitFormulario{
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+.grillaFormulario .textoFormulario{
+    grid-column: 2/4;
+    grid-row: 3/4;
+}
+.grillaFormulario .formulario{
+    width: 100%;
+    background: #1a5aa8;
+    padding: 30px;
+    margin: auto;
+    margin: 0px 10px; 
+    border-radius: 8px;
+    border: 4px solid #165199;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    box-shadow: 15px 23px 37px rgb(8, 8, 8);
+}
+.grillaFormulario .formulario legend{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.grillaFormulario .formulario .formulario-registro{
+    width: 100%;
+    background-color: #24303c;
+    padding: 7px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #000;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    color: whitesmoke;
+}
+.grillaFormulario .formulario .formulario p{
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 40px;
+}
+.grillaFormulario .formulario .formulario a{
+    color: white;
+    text-decoration: none;
+}
+.grillaFormulario .formulario .formulario a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.grillaFormulario .formulario .boton{
+    width: 100%;
+    background-color: #133959;
+    border: 1px #133959;
+    border-radius: 3px;
+    padding: 12px;
+    color:white;
+    margin: 16px 0;
+    font-size: 16px;
+    box-shadow: 10px 10px 37px #02345d;
+}
+.grillaFormulario .formulario .boton:hover{
+    cursor: pointer;
+    background-color: #174e7a;
+}
+.grillaFormulario .formulario .formulario-inicio{
+    
+    width: 100%;
+    background-color: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #fff;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    color: white;
+}
+.grillaFormulario .formulario .formulario-creacion{
+    width: 100%;
+    background-color: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #fff;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    color: white;
+}
+.grillaFormulario .formulario .formulario-contacto{
+    width: 100%;
+    background-color: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+
+/* Tablas */
+
+.tablas{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 15px, 1fr;
+    align-items: center;
+    justify-items: center;
+}
+.tablas .tablasTitulo{
+    grid-column: 2/5;
+    grid-row: 1/2;
+}
+.tablas .tablasContenido{
+    grid-column: 2/5;
+    grid-row: 2/3;
+}
+
+/* Footer */
+
+.pieDepagina{
+    display: grid;
+    height: 11vh;
+    align-items: center;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    font-size: 8px;
+    background-image: radial-gradient( circle 610px at 5.2% 51.6%,  #152c48 0%, #1959a7 97.5% );
+}
+.pieDepagina .menuFooter{
+    display: flex;
+    justify-content: space-around;
+    grid-column: 1/6;
+    grid-row: 2/3;
+    padding-left: 10px;
+    text-align: center;
+}
+.pieDepagina .menuFooter a{
+    color: white;
+    text-decoration: none;
+}
+.pieDepagina .titulo{
+    grid-column: 7/9;
+    grid-row: 1/2;
+    
+}
+.pieDepagina .derechos{
+    grid-column: 7/9;
+    grid-row: 2/3;
+}
+.pieDepagina .redes{
+    justify-self: center;
+    grid-column: 11/13;
+    grid-row: 1/2;
+    font-size: 12px;
+}
+.pieDepagina .redesIconos{
+    display:flex;
+    justify-content: space-around;
+    grid-column: 11/13;
+    grid-row: 2/3;
+    padding-bottom: 5px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    .navbar .menu{
+        display: none;
+    }
+    .navbar .logo{
+        display: grid;
+        animation: none;
+        grid-column: 2/3;
+        grid-row: 2/4;
+    }
+    .navbar .logoZoom{
+        display: grid;
+        animation: none;
+        grid-column: 2/3;
+        grid-row: 2/4;
+    }
+    .navbar .menuUsuario{
+        display: none;
+    }
+    .navbar .menu-bar{
+        display: flex;
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .fa-solid {
+        color: #95d300;
+    }
+    .navbar .menu-user{
+        display: flex;
+        grid-column: 3/4;
+        grid-row: 1/2;
+        flex-direction: row-reverse;
+    }
+    .navbar .menu-reg{
+        display: flex;
+        grid-column: 3/4;
+        grid-row: 4/5;
+        flex-direction: row-reverse;
+    }
+
+    /* Index */
+    .principal{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+    }
+    .contenido{
+        grid-column: 2/4;
+    }
+    .contenido .crear{
+        grid-column: 2/4;
+    }
+    .contenido .unirse{
+        grid-column: 4/6;
+    }
+
+    /* Footer */
+    .pieDepagina{
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .pieDepagina .menuFooter{
+        display: none;
+    }
+    .pieDepagina .titulo{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .pieDepagina .derechos{
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+    .pieDepagina .redes{
+        display: none;
+    }
+    .pieDepagina .redesIconos{
+        grid-column: 4/5;
+
+    }
+}
+
+
+
+/* KEYFRAMES */
+@keyframes logo {
+    0%      {transform: scale(10, 10);}
+    /* 5%      {transform: translate(300px, 300px);}  */
+    10%     {transform: scale(9, 9);}
+    /* 15%     {transform: translate(250px, 250px);} */
+    20%     {transform: scale(8, 8);}
+    /* 25%     {transform: translate(200px, 200px);} */
+    30%     {transform: scale(7, 7);}
+    /* 35%     {transform: translate(150px, 150px);} */
+    40%     {transform: scale(6, 6);}
+    /* 45%     {transform: translate(100px, 100px);} */
+    50%     {transform: scale(5, 5);}
+    /* 55%     {transform: translate(75px, 75px);} */
+    60%     {transform: scale(4, 4);}
+    /* 65%     {transform: translate(50px, 50px);} */
+    70%     {transform: scale(3, 3);}
+    /* 75%     {transform: translate(25px, 25px);} */
+    80%     {transform: scale(2, 2);}
+    /* 85%     {transform: translate(10px, 10px);} */
+    90%     {transform: scale(1.5, 1.5);}
+    /* 95%     {transform: translate(5px, 5px);} */
+    100%    {transform: scale(1, 1);}
+}

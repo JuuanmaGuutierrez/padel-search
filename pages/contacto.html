@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icono de pestaña -->
+    <link rel="icon" href="../assets/icon/logo2.png" type="image/x-icon">
+    <!-- Likeo a CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Script para iconos -->
+	<script src="https://kit.fontawesome.com/c2573c617a.js" crossorigin="anonymous"></script>
+    <title>PadelSearch-Inicio</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a img class="logo" href="../index.html"><img class="logo" src="../assets/icon/padelsearch.png" alt="Logo"></a>
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Sobre nosotros</a></li>
+                <li><a href="contacto.html">Contactanos</a></li>
+                <li><a href="crear.html">Crear Partido</a></li>
+                <li><a href="partidos.html">Partidos</a></li>
+                <li><a href="jugadores.html">Jugadores</a></li>
+            </ul>
+            <div class="menuUsuario">
+                <li><a href="registro.html">Registrarse</a></li>
+                <li><a href="inicio.html">Conectarse</a></li>
+            </div>
+            <div class="menu-bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="menu-user">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="menu-reg">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+		<section class="grillaFormulario">
+			<h1 class="tituloFormulario">PadelSearch</h1>
+			<h2 class="subtitFormulario">Bienvenido a tú buscador de partidos</h2>
+			<p class="textoFormulario">Ya se termino eso de suspender los partidos porque faltan jugadores, o te cancela alguien a ultimo momento</p>
+			<article class="form">
+                <!--Formulario de contacto-->
+                <form class="formulario" action="procesar.php" method="post">
+                        <legend>Contactate con nosotros</legend>
+                            <input	class="formulario-contacto" type="text" name="nombre" placeholder="Ingresa tu nombre" required>
+                            <input	class="formulario-contacto" type="text" name="apellido" placeholder="Ingresa tu apellido" required>
+                            <input	class="formulario-contacto" type="email" name="email" placeholder="Ingresa tu email" required>
+                            <input	class="formulario-contacto" type="tel" name="tel" placeholder="Ingresa tu numero de telefono" required>
+                            <input	class="formulario-contacto" type="text" name="localidad" placeholder="Ingresa tu localidad">
+                            <input	class="formulario-contacto" type="text" name="asunto" placeholder="Pone un titulo a tu comentario" required>
+                            <textarea name="comentario" id="" cols="44" rows="5" placeholder="Ingresa tu comentario" maxlength="200" required></textarea>
+                            <input class="boton" type="button" value="Enviar">
+                </form>
+        </article>
+    </section>
+    </main>
+    <footer class="pieDepagina">
+        <ul class="menuFooter">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="contacto.html">Contactanos</a></li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="terminos.html">Terminos y Condiciones</a></li>
+        </ul>
+            <h3 class="titulo">PadelSearch</h3>
+            <h3 class="derechos"> &#174 Todos los derechos reservados 2022</h3>
+            <h4 class="redes">¡Seguinos!</h4>
+        <div class="redesIconos">
+            <li><a href="https://www.instagram.com/worldpadeltour/?hl=es" target="_blank"></a><img src="../assets/icon/instagram.png" width="30px" alt="LogoInstagram"></li>
+            <li><a href="https://twitter.com/WorldPadelTour" target="_blank"><img src="../assets/icon/twitter.png" width="30px" alt=""></a></li>
+            <li><a href="https://wa.me/5422362138?text=Hola%20me%20comunicaba%20por%20un%20turno%20para%20la%20cancha" target="_blank"><img src="../assets/icon/whatsapp.png" width="30px" alt=""></a></li>
+        </div>
+    </footer>
+</body>
+</html>

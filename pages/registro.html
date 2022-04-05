@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icono de pestaña -->
+    <link rel="icon" href="../assets/icon/logo2.png" type="image/x-icon">
+    <!-- Likeo a CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Script para iconos -->
+	<script src="https://kit.fontawesome.com/c2573c617a.js" crossorigin="anonymous"></script>
+    <title>PadelSearch-Inicio</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a img class="logo" href="../index.html"><img class="logo" src="../assets/icon/padelsearch.png" alt="Logo"></a>
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Sobre nosotros</a></li>
+                <li><a href="contacto.html">Contactanos</a></li>
+                <li><a href="crear.html">Crear Partido</a></li>
+                <li><a href="partidos.html">Partidos</a></li>
+                <li><a href="jugadores.html">Jugadores</a></li>
+            </ul>
+            <div class="menuUsuario">
+                <li><a href="registro.html">Registrarse</a></li>
+                <li><a href="inicio.html">Conectarse</a></li>
+            </div>
+            <div class="menu-bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="menu-user">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="menu-reg">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </div>
+        </nav>
+    </header>
+	<main>
+		<section class="grillaFormulario">
+			<h1 class="tituloFormulario">PadelSearch</h1>
+			<h2 class="subtitFormulario">Bienvenido a tú buscador de partidos</h2>
+			<p class="textoFormulario">Ya se termino eso de suspender los partidos porque faltan jugadores, o te cancela alguien a ultimo momento</p>
+			<article class="form">
+						<form class="formulario" action="procesar.php" method="post">
+								<legend>Registrate</legend>
+								<input class="formulario-registro" type="text" name="nombre" placeholder="Ingrese su Nombre" required>
+								<input class="formulario-registro" type="text" name="apellido" placeholder="Ingrese su apellido" required>
+								<input class="formulario-registro" type="email" name="email" placeholder="Ingrese su Email" required>
+								<input class="formulario-registro" type="text"  name="tel" placeholder="Ingrese su Télefono" required>
+								<input class="formulario-registro" type="text" name="usuario" placeholder="Ingrese su Usuario" required>
+								<label for="nacimiento"> Fecha de Nacimiento</label>
+								<input class="formulario-registro" type="date" name="nacimiento" required>
+								<input class="formulario-registro" type="password" name="pass" placeholder="Ingrese su Contraseña" required>
+								<input class="formulario-registro" type="password" name="repass" placeholder="Ingrese nuevamente su contraseña"  required>
+								<input class="formulario-registro" type="text" name="localidad" placeholder="Ingrese su Localidad" required>
+								<label for="nivel"> Idique su nivel de juego</label>
+									<select name="Nivel" required>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>						
+									</select>
+									<p></p>
+									<legend>Indique su genero</legend>
+								<!--Aca no supe como poner como que es requerido uno de los radial para poder registrarse-->
+								<label for="genero">Hombre</label>
+								<input class="formulario-registro" type="radio" name="genero" value="Hombre">
+								<label for="genero">Mujer</label>
+								<input class="formulario-registro" type="radio" name="genero" value="Mujer">
+								<label for="genero">No Binario</label>
+								<input class="formulario-registro" type="radio" name="genero" value="No Binario">
+								<input class="formulario-registro" type="checkbox"> Deseo recibir notificaciones de partidos
+								<input class="formulario-registro" type="checkbox"> Acepto recibir mensajes de otros jugadores
+								<input class="formulario-registro" type="checkbox" required> Acepto los <a href="terminos.html">Terminos y Condiciones</a> de PadelSearch
+								<input class="boton" type="button" value="Registrarme">
+								<p><a href="registro.html">¿Ya tengo Cuenta?</a></p>
+						</form>
+			</article>
+		</section>
+	</main>	
+    <footer class="pieDepagina">
+        <ul class="menuFooter">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="contacto.html">Contactanos</a></li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="terminos.html">Terminos y Condiciones</a></li>
+        </ul>
+            <h3 class="titulo">PadelSearch</h3>
+            <h3 class="derechos"> &#174 Todos los derechos reservados 2022</h3>
+            <h4 class="redes">¡Seguinos!</h4>
+        <div class="redesIconos">
+            <li><a href="https://www.instagram.com/worldpadeltour/?hl=es" target="_blank"></a><img src="../assets/icon/instagram.png" width="30px" alt="LogoInstagram"></li>
+            <li><a href="https://twitter.com/WorldPadelTour" target="_blank"><img src="../assets/icon/twitter.png" width="30px" alt=""></a></li>
+            <li><a href="https://wa.me/5422362138?text=Hola%20me%20comunicaba%20por%20un%20turno%20para%20la%20cancha" target="_blank"><img src="../assets/icon/whatsapp.png" width="30px" alt=""></a></li>
+        </div>
+    </footer>
+</body>
+</html>

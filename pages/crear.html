@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icono de pestaña -->
+    <link rel="icon" href="../assets/icon/logo2.png" type="image/x-icon">
+    <!-- Likeo a CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Script para iconos -->
+	<script src="https://kit.fontawesome.com/c2573c617a.js" crossorigin="anonymous"></script>
+    <title>PadelSearch-Inicio</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a img class="logo" href="../index.html"><img class="logo" src="../assets/icon/padelsearch.png" alt="Logo"></a>
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Sobre nosotros</a></li>
+                <li><a href="contacto.html">Contactanos</a></li>
+                <li><a href="crear.html">Crear Partido</a></li>
+                <li><a href="partidos.html">Partidos</a></li>
+                <li><a href="jugadores.html">Jugadores</a></li>
+            </ul>
+            <div class="menuUsuario">
+                <li><a href="registro.html">Registrarse</a></li>
+                <li><a href="inicio.html">Conectarse</a></li>
+            </div>
+            <div class="menu-bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="menu-user">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="menu-reg">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </div>
+        </nav>
+    </header>
+	<main>
+		<section class="grillaFormulario">
+			<h1 class="tituloFormulario">PadelSearch</h1>
+			<h2 class="subtitFormulario">Bienvenido a tú buscador de partidos</h2>
+			<p class="textoFormulario">Ya se termino eso de suspender los partidos porque faltan jugadores, o te cancela alguien a ultimo momento</p>
+			<article class="form">
+			<!--Formulario para crear un partido-->
+				<form  class="formulario" action="procesar.php" method="post">
+							<legend>Crear un partido</legend>
+								<input class="formulario-creacion" type="nombre" name="usuario" placeholder="Ingrese su usuario" required>
+								<input class="formulario-creacion" type="tel" name="telefono" placeholder="Ingrese su numero de telefono" required>
+								<p>
+								<label for="cantidad">Cantidad de jugadores</label>
+								<select name="cantidad" required>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+								</select>
+								</p>
+								<p>
+								<label for="nivel">Nivel de jugadores</label>
+									<select name="nivel" required>						
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>						
+									</select>
+								</p>
+								<p>
+								<input class="formulario-creacion" type="text" name="localidad" placeholder="Localidad">
+								</p>
+								<p></p>
+								<input class="formulario-creacion" type="checkbox"> Acepto recibir mensajes de otros Jugadores
+								<input class="formulario-creacion" type="checkbox" required> Acepto los <a href="terms.html">Terminos y Condiciones</a> de PadelSearch
+								<p>
+								<input class="boton" type="button" value="Crear Partido"> 
+								</p>
+				</form>
+			</article>
+		</section>
+	</main>
+    <footer class="pieDepagina">
+        <ul class="menuFooter">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="contacto.html">Contactanos</a></li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="terminos.html">Terminos y Condiciones</a></li>
+        </ul>
+            <h3 class="titulo">PadelSearch</h3>
+            <h3 class="derechos"> &#174 Todos los derechos reservados 2022</h3>
+            <h4 class="redes">¡Seguinos!</h4>
+        <div class="redesIconos">
+            <li><a href="https://www.instagram.com/worldpadeltour/?hl=es" target="_blank"></a><img src="../assets/icon/instagram.png" width="30px" alt="LogoInstagram"></li>
+            <li><a href="https://twitter.com/WorldPadelTour" target="_blank"><img src="../assets/icon/twitter.png" width="30px" alt=""></a></li>
+            <li><a href="https://wa.me/5422362138?text=Hola%20me%20comunicaba%20por%20un%20turno%20para%20la%20cancha" target="_blank"><img src="../assets/icon/whatsapp.png" width="30px" alt=""></a></li>
+        </div>
+    </footer>
+</body>
+</html>
