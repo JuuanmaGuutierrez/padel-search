@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
+        <nav class="nav-bar">
             <a img class="logo" href="../index.html"><img class="logo" src="../assets/icon/padelsearch.png" alt="Logo"></a>
             <ul class="menu">
                 <li><a href="../index.html">Inicio</a></li>
@@ -40,19 +40,23 @@
         </nav>
     </header>
     <main>
-    <section class="grillaFormulario">
-        <h1 class="tituloFormulario">PadelSearch</h1>
-        <h2 class="subtitFormulario">Bienvenido a tú buscador de partidos</h2>
-        <p class="textoFormulario">Ya se termino eso de suspender los partidos porque faltan jugadores, o te cancela alguien a ultimo momento</p>
-        <article class="form">
-            <form class="formulario" action="procesar.php" method="post">
-                    <legend>Iniciar Sesión</legend>
-                    <input class="formulario-inicio" type="text" name="usuario" placeholder="Ingrese su usuario" required>
-                    <input class="formulario-inicio" type="password" name="pass" placeholder="Ingrese su contraseña" required>
-                    <input class="boton" type="submit" value="Entrar">
-                    <p><a href="reg.html">¿No tengo Cuenta?</a></p>
-            </form>
+    <section>
+        <article class="padelsearch">
+            <h1>PadelSearch</h1>
+            <h2>Bienvenido a tú buscador de partidos</h2>
+            <p>Ya se termino eso de suspender los partidos porque faltan jugadores, o te cancela alguien a ultimo momento</p>
         </article>
+        <div class="grillaFormulario">
+            <article class="form">
+                <form class="formulario" action="procesar.php" method="post">
+                    <legend>Iniciar Sesión</legend>
+                    <input class="formulario-inicio" type="text" name="usuario" placeholder="Ingrese su usuario"    required>
+                    <input class="formulario-inicio" type="password" name="pass" placeholder="Ingrese su contraseña"    required>
+                    <input class="boton" type="submit" value="Entrar">
+                        <p><a href="reg.html">¿No tengo Cuenta?</a></p>
+                </form>
+            </article>
+        </div>
     </section>
 </main>
     <footer class="pieDepagina">

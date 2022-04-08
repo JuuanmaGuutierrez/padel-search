@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
+        <nav class="nav-bar">
             <a img class="logo" href="../index.html"><img class="logo" src="../assets/icon/padelsearch.png" alt="Logo"></a>
             <ul class="menu">
                 <li><a href="../index.html">Inicio</a></li>
@@ -40,10 +40,13 @@
         </nav>
     </header>
     <main>
-		<section class="grillaFormulario">
-			<h1 class="tituloFormulario">PadelSearch</h1>
-			<h2 class="subtitFormulario">Bienvenido a tú buscador de partidos</h2>
-			<p class="textoFormulario">Ya se termino eso de suspender los partidos porque faltan jugadores, o te cancela alguien a ultimo momento</p>
+		<section>
+            <article class="padelsearch">
+                <h1 class="tituloFormulario">PadelSearch</h1>
+                <h2 class="subtitFormulario">Bienvenido a tú buscador de partidos</h2>
+                <p class="textoFormulario">Ya se termino eso de suspender los partidos porque faltan jugadores, o te cancela alguien a ultimo momento</p>
+            </article>
+        <div class="grillaFormulario">
 			<article class="form">
                 <!--Formulario de contacto-->
                 <form class="formulario" action="procesar.php" method="post">
@@ -57,7 +60,8 @@
                             <textarea name="comentario" id="" cols="44" rows="5" placeholder="Ingresa tu comentario" maxlength="200" required></textarea>
                             <input class="boton" type="button" value="Enviar">
                 </form>
-        </article>
+            </article>
+        </div>
     </section>
     </main>
     <footer class="pieDepagina">
