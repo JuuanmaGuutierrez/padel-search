@@ -78,7 +78,7 @@ label{
     display: flex;
     justify-content: space-around;
     grid-column: 3/10;
-    grid-row: 1/4;
+    grid-row: 2/4;
 }
 .nav-bar .menuUsuario{
     display: flex;
@@ -383,7 +383,7 @@ label{
     align-items: center;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    font-size: 8px;
+    font-size: 12px;
     background-image: radial-gradient( circle 610px at 5.2% 51.6%,  #152c48 0%, #1959a7 97.5% );
 }
 .pieDepagina .menuFooter{
@@ -399,11 +399,13 @@ label{
     text-decoration: none;
 }
 .pieDepagina .titulo{
+    font-size: 12px;
     grid-column: 7/9;
     grid-row: 1/2;
     
 }
 .pieDepagina .derechos{
+    font-size: 12px;
     grid-column: 7/9;
     grid-row: 2/3;
 }
@@ -425,10 +427,26 @@ label{
 
 @media screen and (max-width: 768px) {
 
-    /* Navbar Bootsrap */
-    /* .navbar{
+    /* Navbar Bootsrap  */
+    .navbar{
         display: block;
-    } */
+        background-image: radial-gradient( circle 610px at 5.2% 51.6%,  #152c48 0%, #1959a7 97.5% );
+    }
+    .nav-item{
+        display: flex;
+        margin: 5px;
+        font-family: 'popins';
+        border: solid 1px white;
+        border-radius: 50px;
+        justify-content: center;
+    }
+    .offcanvas{
+        background-image: radial-gradient( circle 610px at 5.2% 51.6%,  #152c48 0%, #195daf 97.5% );
+    }
+    .offcanvas-title{
+        font-family: 'popins';
+        font-size: 20px;
+    }
     .nav-bar{
         display: none;
     }
@@ -441,7 +459,7 @@ label{
     .logoNavBootstrap{
         width: 140px;
     }
-    .nav-bar{
+    /* .nav-bar{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, 1fr);
@@ -483,7 +501,7 @@ label{
         grid-column: 3/4;
         grid-row: 4/5;
         flex-direction: row-reverse;
-    }
+    } */
 
     /* Index */
     .principal{
@@ -506,6 +524,7 @@ label{
         display: grid;
         grid-template-columns: repeat(4, auto);
         grid-template-rows: repeat(3, 1fr);
+        justify-content: space-evenly;
     }
     .pieDepagina .menuFooter{
         display: none;
