@@ -1,0 +1,177 @@
+/* Formularios */
+
+.grillaFormulario{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    .form{
+        grid-column: 2/4;
+        grid-row: 1/12;
+    }
+    .formulario{
+        width: 100%;
+        background: $color-hover;
+        padding: 30px;
+        margin: auto;
+        margin: 0px 10px; 
+        border-radius: 8px;
+        border: 4px solid #165199;
+        font-family: Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        box-shadow: 15px 23px 37px rgb(8, 8, 8);
+        legend{
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .formulario-registro{
+            width: 100%;
+            background-color: #165199;
+            padding: 7px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            border: 1px solid #000;
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 16px;
+            color: whitesmoke;
+        }
+        p{
+            height: 40px;
+            text-align: center;
+            font-size: 16px;
+            line-height: 40px;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            &:hover{
+                color: white;
+                text-decoration: underline;
+            }
+        }
+        .boton{
+            width: 100%;
+            background-color: #133959;
+            border: 1px #133959;
+            border-radius: 3px;
+            padding: 12px;
+            color:white;
+            margin: 16px 0;
+            font-size: 16px;
+            box-shadow: 10px 10px 37px #02345d;
+            &:hover{
+                background-color: #174e7a;
+            }
+        }
+        .formulario-inicio{
+            width: 100%;
+            background-color: #24303c;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            border: 1px solid #fff;
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            color: white;
+        }
+        .formulario-creacion{
+            width: 100%;
+            background-color: #24303c;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            border: 1px solid #fff;
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            color: white;
+        }
+        .formulario-contacto{
+            width: 100%;
+            background-color: #24303c;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            border: 1px solid #1f53c5;
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            color: white;
+        }
+        
+    }
+}
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+
+    /* Navbar Bootsrap  */
+
+    .bootstrap{
+        display: block;
+    }
+    .navbar{
+        display: block;
+        background-image: radial-gradient( circle 610px at 5.2% 51.6%,  #152c48 0%, #1959a7 97.5% );
+    }
+    .nav-item{
+        display: flex;
+        margin: 5px;
+        font-family: 'popins';
+        border: solid 1px white;
+        border-radius: 50px;
+        justify-content: center;
+    }
+    .offcanvas{
+        background-image: radial-gradient( circle 610px at 5.2% 51.6%,  #152c48 0%, #195daf 97.5% );
+    }
+    .offcanvas-title{
+        font-family: 'popins';
+        font-size: 20px;
+    }
+    .nav-bar{
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+    .logoZoom{
+        display: none;
+    }
+    .logoNavBootstrap{
+        width: 140px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /* Navbar Bootstrap */
+
+    .navbar{
+        display: block;
+    }
+
+    /* Formulario Mobile */
+
+    .grillaFormulario{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        align-items: center;
+        .form{
+            align-self: flex-start;
+            grid-column: 2/6;
+            grid-row: 5/12;
+        }
+        .tituloFormulario{
+            grid-column: 2/6;
+            grid-row: 1/2;
+        }
+        .subtitFormulario{
+            grid-column: 2/6;
+            grid-row: 2/3;
+        }
+        .textoFormulario{
+            grid-column: 2/6;
+            grid-row: 3/4;
+        }
+    }
+}

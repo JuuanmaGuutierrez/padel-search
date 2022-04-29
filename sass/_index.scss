@@ -1,0 +1,132 @@
+/* Index-Principal */
+
+.principal{
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    .contenido{
+        grid-column: 2/5;
+        grid-row: 2/7;
+    }
+    h1{
+        font-size: 40px;
+        text-decoration: underline;
+    }
+    h2{
+        font-size: 20px;
+        padding: 5px 0 20px;
+    }
+    .crear{
+        font-family: 'popins';
+        font-size: 16px;
+        font-weight: 500;
+        border: solid 2px;
+        margin: 12px;
+        border-radius: 10px;
+        padding: 3px;
+        text-decoration: none;
+        background-color: map-get($map: $colores-botones, $key: 'crear' );
+    }
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+
+    /* Navbar Bootsrap  */
+
+    .bootstrap{
+        display: block;
+    }
+    .navbar{
+        display: block;
+        background-image: radial-gradient( circle 610px at 5.2% 51.6%,  #152c48 0%, #1959a7 97.5% );
+    }
+    .nav-item{
+        display: flex;
+        margin: 5px;
+        font-family: 'popins';
+        border: solid 1px white;
+        border-radius: 50px;
+        justify-content: center;
+    }
+    .offcanvas{
+        background-image: radial-gradient( circle 610px at 5.2% 51.6%,  #152c48 0%, #195daf 97.5% );
+    }
+    .offcanvas-title{
+        font-family: 'popins';
+        font-size: 20px;
+    }
+    .nav-bar{
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+    .logoZoom{
+        display: none;
+    }
+    .logoNavBootstrap{
+        width: 140px;
+    }
+}
+@media screen and (max-width: 480px) {
+
+    /* Navbar Bootstrap */
+
+    .navbar{
+        display: block;
+    }
+
+    /* Formulario Mobile */
+
+    .grillaFormulario{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        align-items: center;
+        .form{
+            align-self: flex-start;
+            grid-column: 2/6;
+            grid-row: 5/12;
+        }
+        .tituloFormulario{
+            grid-column: 2/6;
+            grid-row: 1/2;
+        }
+        .subtitFormulario{
+            grid-column: 2/6;
+            grid-row: 2/3;
+        }
+        .textoFormulario{
+            grid-column: 2/6;
+            grid-row: 3/4;
+        }
+    }
+}
+
+/* KEYFRAMES */
+@keyframes logo {
+    0%      {transform: scale(10, 10);}
+    /* 5%      {transform: translate(300px, 300px);}  */
+    10%     {transform: scale(9, 9);}
+    /* 15%     {transform: translate(250px, 250px);} */
+    20%     {transform: scale(8, 8);}
+    /* 25%     {transform: translate(200px, 200px);} */
+    30%     {transform: scale(7, 7);}
+    /* 35%     {transform: translate(150px, 150px);} */
+    40%     {transform: scale(6, 6);}
+    /* 45%     {transform: translate(100px, 100px);} */
+    50%     {transform: scale(5, 5);}
+    /* 55%     {transform: translate(75px, 75px);} */
+    60%     {transform: scale(4, 4);}
+    /* 65%     {transform: translate(50px, 50px);} */
+    70%     {transform: scale(3, 3);}
+    /* 75%     {transform: translate(25px, 25px);} */
+    80%     {transform: scale(2, 2);}
+    /* 85%     {transform: translate(10px, 10px);} */
+    90%     {transform: scale(1.5, 1.5);}
+    /* 95%     {transform: translate(5px, 5px);} */
+    100%    {transform: scale(1, 1);}
+}
