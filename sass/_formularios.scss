@@ -1,30 +1,22 @@
+@import "fuentes";
+
 /* Formularios */
 
-.grillaFormulario{
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    .form{
-        grid-column: 2/4;
-        grid-row: 1/12;
-    }
+.form{
+    display: flex;
+    justify-content: center;
     .formulario{
-        width: 100%;
+        width: 75%;
         background: $color-hover;
         padding: 30px;
-        margin: auto;
-        margin: 0px 10px; 
+        margin: 30px 10px; 
         border-radius: 8px;
         border: 4px solid #165199;
         font-family: Calibri, 'Trebuchet MS', sans-serif;
         color: white;
         box-shadow: 15px 23px 37px rgb(8, 8, 8);
-        legend{
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
         .formulario-registro{
+            @include formulario;
             width: 100%;
             background-color: #165199;
             padding: 7px;
@@ -34,6 +26,11 @@
             font-family: Calibri, 'Trebuchet MS', sans-serif;
             font-size: 16px;
             color: whitesmoke;
+        }
+        .centrado-reg{
+            @include formulario;
+            display: flex;
+            flex-direction: column;
         }
         p{
             height: 40px;
@@ -97,81 +94,5 @@
             color: white;
         }
         
-    }
-}
-/* MEDIA QUERIES */
-
-@media screen and (max-width: 768px) {
-
-    /* Navbar Bootsrap  */
-
-    .bootstrap{
-        display: block;
-    }
-    .navbar{
-        display: block;
-        background-image: radial-gradient( circle 610px at 5.2% 51.6%,  #152c48 0%, #1959a7 97.5% );
-    }
-    .nav-item{
-        display: flex;
-        margin: 5px;
-        font-family: 'popins';
-        border: solid 1px white;
-        border-radius: 50px;
-        justify-content: center;
-    }
-    .offcanvas{
-        background-image: radial-gradient( circle 610px at 5.2% 51.6%,  #152c48 0%, #195daf 97.5% );
-    }
-    .offcanvas-title{
-        font-family: 'popins';
-        font-size: 20px;
-    }
-    .nav-bar{
-        display: none;
-    }
-    .logo{
-        display: none;
-    }
-    .logoZoom{
-        display: none;
-    }
-    .logoNavBootstrap{
-        width: 140px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-
-    /* Navbar Bootstrap */
-
-    .navbar{
-        display: block;
-    }
-
-    /* Formulario Mobile */
-
-    .grillaFormulario{
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(12, 1fr);
-        align-items: center;
-        .form{
-            align-self: flex-start;
-            grid-column: 2/6;
-            grid-row: 5/12;
-        }
-        .tituloFormulario{
-            grid-column: 2/6;
-            grid-row: 1/2;
-        }
-        .subtitFormulario{
-            grid-column: 2/6;
-            grid-row: 2/3;
-        }
-        .textoFormulario{
-            grid-column: 2/6;
-            grid-row: 3/4;
-        }
     }
 }

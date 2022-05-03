@@ -20,8 +20,8 @@
 	<script src="https://kit.fontawesome.com/c2573c617a.js" crossorigin="anonymous"></script>
     <title>PadelSearch-Inicio</title>
 </head>
-<body> <!--Aca tenia una clase body-->
-    <header>
+<body class="contenedor-body"> <!--Aca tenia una clase body-->
+    <header class="contenido-header">
         <!-- Menu Hamburguesa Bootsrap -->
         <div class="bootstrap">
         <div class="navbar navbar-light bg-light fixed-top">
@@ -62,7 +62,7 @@
         </div>
     </div>
         <nav class="nav-bar">
-            <a img class="logo" href="../index.html"><img class="logo" src="../assets/icon/padelsearch.png" alt="Logo"></a>
+            <a class="logo" href="../index.html"><img class="logo" src="../assets/icon/padelsearch.png" alt="Logo"></a>
             <ul class="menu">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Sobre nosotros</a></li>
@@ -77,14 +77,13 @@
             </div>
         </nav>
     </header>
-	<main>
+	<main class="contenido-main">
 		<section>
             <article class="padelsearch">
 			<h1>PadelSearch</h1>
 			<h2>Bienvenido a tú buscador de partidos</h2>
 			<p>Ya se termino eso de suspender los partidos porque faltan jugadores, o te cancela alguien a ultimo momento</p>
             </article>
-        <div class="grillaFormulario">
 			<article class="form">
 						<form class="formulario" action="procesar.php" method="post">
 								<legend>Registrate</legend>
@@ -111,29 +110,21 @@
 										<option value="9">9</option>
 										<option value="10">10</option>						
 									</select>
-									<p></p>
 									<legend>Indique su genero</legend>
 								<!--Aca no supe como poner como que es requerido uno de los radial para poder registrarse-->
-                                <p class="parrafoPrueba">
-								<label for="genero">Hombre</label>
-								<input class="formulario-registro Prueba" type="radio" name="genero" value="Hombre"></p>
-                                <p class="parrafoPrueba">
-								<label for="genero">Mujer</label>
-								<input class="formulario-registro Prueba" type="radio" name="genero" value="Mujer"></p>
-                                <p class="parrafoPrueba">
-								<label for="genero">No Binario</label>
-								<input class="formulario-registro Prueba" type="radio" name="genero" value="No Binario"></p>
-                                <p class="parrafoPrueba">
-								<input class="formulario-registro Prueba" type="checkbox"> Deseo recibir notificaciones de partidos</p>
-                                <p class="parrafoPrueba">
-								<input class="formulario-registro Prueba" type="checkbox"> Acepto recibir mensajes de otros jugadores</p>
-                                <p class="parrafoPrueba">
-								<input class="formulario-registro Prueba" type="checkbox" required> Acepto los <a href="terminos.html">Terminos y Condiciones</a> de PadelSearch</p>
+                                <p></p>
+                                <div class="centrado-reg">
+                                    <label class="check" for="texto"><input type="radio"/>Hombre</label>
+                                    <label class="check" for="texto"><input type="radio"/>Mujer</label>
+                                    <label class="check" for="texto"><input type="radio"/>No Binario</label>
+                                    <label class="check" for="texto"><input type="checkbox"/>Deseo recibir notificaciones de partidos</label>
+                                    <label class="check" for="texto"><input type="checkbox"/>Acepto recibir mensajes de otros jugadores</label>
+                                    <label class="check" for="texto"><input type="checkbox"/>Acepto los <a href="terminos.html">Terminos y Condiciones</a> de PadelSearch</label>
+                                </div>
 								<input class="boton" type="button" value="Registrarme">
 								<p><a href="registro.html">¿Ya tengo Cuenta?</a></p>
 						</form>
 			</article>
-        </div>
 		</section>
 	</main>	
     <footer class="pieDepagina">

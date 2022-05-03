@@ -3,7 +3,7 @@
 .padelsearch{
     display: grid;
     grid-template-columns: repeat(8,1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
     h1{
@@ -14,11 +14,11 @@
     }
     h2{
         grid-column: 3/7;
-        grid-row: 3/4;
+        grid-row: 2/3;
     }
     p{
         grid-column: 3/7;
-        grid-row: 4/5;
+        grid-row: 3/4;
     }
 }
 
@@ -28,77 +28,3 @@
 }
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 768px) {
-
-    /* Navbar Bootsrap  */
-
-    .bootstrap{
-        display: block;
-    }
-    .navbar{
-        display: block;
-        background-image: radial-gradient( circle 610px at 5.2% 51.6%,  #152c48 0%, #1959a7 97.5% );
-    }
-    .nav-item{
-        display: flex;
-        margin: 5px;
-        font-family: 'popins';
-        border: solid 1px white;
-        border-radius: 50px;
-        justify-content: center;
-    }
-    .offcanvas{
-        background-image: radial-gradient( circle 610px at 5.2% 51.6%,  #152c48 0%, #195daf 97.5% );
-    }
-    .offcanvas-title{
-        font-family: 'popins';
-        font-size: 20px;
-    }
-    .nav-bar{
-        display: none;
-    }
-    .logo{
-        display: none;
-    }
-    .logoZoom{
-        display: none;
-    }
-    .logoNavBootstrap{
-        width: 140px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-
-    /* Navbar Bootstrap */
-
-    .navbar{
-        display: block;
-    }
-
-    /* Formulario Mobile */
-
-    .grillaFormulario{
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(12, 1fr);
-        align-items: center;
-        .form{
-            align-self: flex-start;
-            grid-column: 2/6;
-            grid-row: 5/12;
-        }
-        .tituloFormulario{
-            grid-column: 2/6;
-            grid-row: 1/2;
-        }
-        .subtitFormulario{
-            grid-column: 2/6;
-            grid-row: 2/3;
-        }
-        .textoFormulario{
-            grid-column: 2/6;
-            grid-row: 3/4;
-        }
-    }
-}
