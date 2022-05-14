@@ -1,9 +1,10 @@
+
 /* Sobre nosotros */
 
 .nosotros{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     h1{
         display: flex;
         grid-column: 2/4;
@@ -25,41 +26,40 @@
     }
     .parrafoTres{
         grid-column: 2/5;
-        grid-row: 6/8;
-    }
-    .unirse{
-        grid-column: 2/5;
-        grid-row: 7/8;
-        font-family: 'popins';
-        font-size: 16px;
-        font-weight: 500;
-        border: solid 2px;
-        border-radius: 10px;
-        margin: 12px;
-        padding: 3px;
-        max-height: 35px;
-        max-width: fit-content;
-        background-color: map-get($map: $colores-botones, $key: 'unirse' );
-        a{
-            text-decoration: none;
+        grid-row: 6/9;
+        display: flex;
+        flex-direction: column;
+        .unirse{
+            font-family: 'popins';
+            font-size: 16px;
+            font-weight: 500;
+            border: solid 2px;
+            border-radius: 10px;
+            margin: 12px;
+            padding: 5px;
+            max-height: fit-content;
+            max-width: fit-content;
+            background-color: map-get($map: $colores-botones, $key: 'unirse' );
+                a{
+                    text-decoration: none;
+                    }
+                &:hover{
+                    background-color: map-get($map: $colores-botones, $key: 'hover' );
+                    box-shadow: $color-hover 10px 10px 37px;
+                    transform: scale(1.1);
+                }
         }
-        &:hover{
-            background-color: $color-hover;
-            color: white;
-        }
-    }
-    .buscar{
-        grid-column: 2/5;
-        grid-row: 8/9;
+        .buscar{
         @extend .unirse;
-        background-color: map-get($map: $colores-botones, $key: 'buscar' );
-        a{
-            text-decoration: none;
-        }
-        &:hover{
-            background-color: $color-hover;
-            color: white;
+            background-color: map-get($map: $colores-botones, $key: 'buscar' );
+            a{
+                text-decoration: none;
+            }
+            &:hover{
+                background-color: map-get($map: $colores-botones, $key: 'hover' );
+                box-shadow: $color-hover 10px 10px 37px;
+                transform: scale(1.1);
+            }
         }
     }
-    
 }
