@@ -24,7 +24,7 @@
         border-radius: 10px;
         margin: 12px;
         padding: 3px;
-        max-height: 35px;
+        max-height: fit-content;
         max-width: fit-content;
         background-color: map-get($map: $colores-botones, $key: 'crear' );
             a{
