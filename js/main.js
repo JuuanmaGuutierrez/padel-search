@@ -8,8 +8,8 @@ class partidoCreado{
         this.localidad = localidad;
     }
 }
-const partidos=[];
 
+const partidos=[];
 
 const usuarioCrear = document.getElementById('usuarioCrear');
 const telCrear = document.getElementById('telCrear');
@@ -34,42 +34,30 @@ nivel.onchange = () => {
 }
 localidad.onchange = () => {
 }
-btnCrearPartido.onclick = () => {
+btnCrearPartido.onclick = (e) => {
+    e.preventDefault();
+
     usuarioCreador = usuarioCrear.value;
     telCreador = telCrear.value;
     cantidadCreador = cantidad.value;
     nivelCreador = nivel.value;
     localidadCreador = localidad.value;
-    console.log(`${usuarioCreador} + ${telCreador} + ${cantidadCreador} + ${nivelCreador} + ${localidadCreador}`);
-    
     let id = (partidos.length) +1;
+    
     let partidoNuevo = new partidoCreado(id,usuarioCreador, telCreador, cantidadCreador, nivelCreador, localidadCreador);
     partidos.push(partidoNuevo);
-    console.log(partidos);
-    subirPartido();
+    const guadarPartidos = (clave, valor) => {
+        localStorage.clear();
+        localStorage.setItem(clave, valor);
+    }
+    guadarPartidos (`partido`, JSON.stringify(partidos));
+    
+    console.log(partidoNuevo);
 }
 
-const subirPartido = () =>{
-    const cardsPartidos = document.getElementById('cardsPartidos');
-    cardsPartidos.innerHTML = "";
-    for (const partido of partidos) {
-        const nuevoCardPartido = document.createElement (`div`)
-        nuevoCardPartido.className = "partidoCreado";
-        nuevoCardPartido.innerHTML =`
-                <div class="card " style="width: 18rem;">
-                <ul class="list-group list-group-flush ">
-                <li class="list-group-item ">Partido Numero ${partido.id}</li>
-                <li class="list-group-item ">Nombre: ${partido.nombre}</li>
-                <li class="list-group-item ">Telefono: ${partido.tel}</li>
-                <li class="list-group-item ">Cantidad de Jugadores: ${partido.cantidad}</li>
-                <li class="list-group-item ">Nivel de los Jugadores: ${partido.nivel}</li>
-                <li class="list-group-item ">Localidad de los Jugadores: ${partido.localidad}</li>
-                </ul>
-                </div>
-        `
-        cardsPartidos.appendChild(nuevoCardPartido);
-    }
-}
+
+
+
 
 
 
