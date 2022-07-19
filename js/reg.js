@@ -17,8 +17,13 @@ const usuarios=[];
     
 formReg.addEventListener('submit', (e) => {
 
-
     e.preventDefault();
+
+    swal({
+        title: 'Bienvenido a la comunidad de PadelSearch',
+        icon: 'success',
+        confirm: 'Ok!'
+    })
 
 
     let nombre = document.getElementById('nombre').value;
@@ -27,11 +32,7 @@ formReg.addEventListener('submit', (e) => {
     let email = document.getElementById('emailReg').value;
     let password = document.getElementById('passwordReg').value;
 
-    swal({
-        title: 'Bienvenido a la comunidad de PadelSearch',
-        icon: 'success',
-        confirm: 'Ok!'
-    })
+
 
     let usuarioNuevo = new usuariosCreador(nombre, apellido, telefono, email, password);
     usuarios.push(usuarioNuevo);
