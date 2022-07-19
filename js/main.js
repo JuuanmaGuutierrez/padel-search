@@ -54,13 +54,3 @@ btnCrearPartido.onclick = (e) => {
     
     console.log(partidoNuevo);
 }
-
-
-
-
-
-
-
-
-
-
