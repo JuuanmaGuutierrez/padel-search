@@ -86,6 +86,3 @@ password.addEventListener('blur', () => {
 
     
 });
-
-// Validaion de datos
-

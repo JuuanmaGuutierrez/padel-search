@@ -37,6 +37,24 @@ localidad.onchange = () => {
 btnCrearPartido.onclick = (e) => {
     e.preventDefault();
 
+    swal({
+        title: 'Tu partido ha sido creado con exito',
+        icon: 'success',
+        confirm: 'Ok!'
+    }).then( result => {
+        if (result) {
+            Toastify({
+            text: 'Tu partido ha sido creado',
+            duration: 3000,
+            gravity: 'bottom',
+            className: 'popUpToastify',
+            style:{
+                background: 'linear-gradient(60deg, rgba(26,90,168,1) 0%, rgba(22,54,93,1) 35%, rgba(18,56,89,1) 100%)',
+            }
+            }).showToast();
+        }
+    } ) 
+
     usuarioCreador = usuarioCrear.value;
     telCreador = telCrear.value;
     cantidadCreador = cantidad.value;
