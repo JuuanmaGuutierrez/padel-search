@@ -15,7 +15,7 @@ const dibujarCards=(listaPartidos)=>{
             <li class="list-group-item ">Nivel de los Jugadores: ${partido.nivel}</li>
             <li class="list-group-item ">Localidad de los Jugadores: ${partido.localidad}</li>
             </ul>
-            <a href="https://wa.me/54${partido.tel}?text=Hola%20${partido.nombre}%20quería%20unirme%20al%20partido%20que%20creaste%20en%20PadelSearch.%20Muchas%20Gracias." target="_blank"><button class="btn btn-primary">Unirse al partido</button></a>
+            <a href="https://wa.me/54${partido.tel}?text=Hola%20${partido.usuario}%20quería%20unirme%20al%20partido%20que%20creaste%20en%20PadelSearch.%20Muchas%20Gracias." target="_blank"><button class="btn btn-primary">Unirse al partido</button></a>
             </div> 
             `
         cardsPartidos.appendChild(nuevoCardPartido);
