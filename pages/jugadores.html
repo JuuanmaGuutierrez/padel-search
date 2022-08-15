@@ -47,9 +47,6 @@
                     <a class="nav-link" aria-current="page" href="partidos.html">Unirse a un Partido</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="crear.html">Crear Partido</a>
-                    </li>
-                    <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="registro.html">Registrate</a>
                     </li>
                     <li class="nav-item">
@@ -67,13 +64,12 @@
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Sobre nosotros</a></li>
                 <li><a href="contacto.html">Contactanos</a></li>
-                <li><a href="crear.html">Crear Partido</a></li>
                 <li><a href="partidos.html">Partidos</a></li>
                 <li><a href="jugadores.html">Jugadores</a></li>
             </ul>
-            <div class="menuUsuario">
-                <li><a href="registro.html">Registrarse</a></li>
-                <li><a href="inicio.html">Conectarse</a></li>
+            <div id="menuUsuario" class="menuUsuario">
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Login</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Registro</button>
             </div>
         </nav>
     </header>
@@ -127,6 +123,81 @@
                     </table>
     </article>
     </section>
+            <!-- Formulario Registro -->
+
+            <div class="modal" id="staticBackdrop2" data-bs-backdrop="false" data-bs-keyboard="false" aria-labelledby="false"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body bg">
+                        <button type="button" class="btn-close float-end text-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                        <form id="formularioRegistro"
+                            class="col-auto p-5 text-center m-5 row justify-content-center rounded border border-dark header">
+                            <label for="exampleInputNombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control bg-dark text-light mb-2" id="nombre">
+                            <label for="exampleInputApellido" class="form-label">Apellido</label>
+                            <input type="text" class="form-control bg-dark text-light mb-2" id="apellido">
+                            <label for="exampleInputPhone" class="form-label">Telefono</label>
+                            <input type="number" class="form-control bg-dark text-light mb-2" id="telefono">
+                            <label for="exampleInputEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control bg-dark text-light mb-2" id="emailReg">
+                            <label for="exampleInputPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control bg-dark text-light" id="passwordReg">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" >
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Deseo recibir notificaciones de partidos
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" >
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Acepto recibir mensajes de otros jugadores
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Acepto los <a href="pages/terminos.html">Terminos y condiciones</a>
+                                </label>
+                            </div>
+                            <div>
+                                <button id="btnReg" type="submit" class="mt-5 text-center btn btn-dark" data-bs-dismiss="modal">Registrarse</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Formulario Logueo -->
+    
+        <div class="modal" id="staticBackdrop" data-bs-backdrop="false" data-bs-keyboard="false" aria-labelledby="false"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body bg">
+                        <button type="button" class="btn-close float-end text-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                        <form id="formularioLog"
+                            class="col-auto p-5 text-center m-5 row justify-content-center rounded border border-dark header">
+                            <label for="exampleInputEmail1" class="form-label">Email</label>
+                            <input type="email" class="form-control bg-dark text-light mb-2" id="email"
+                                aria-describedby="emailHelp">
+                            <div id="errorEmail" class="mb-5">
+                            </div>
+                            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control bg-dark text-light" id="password">
+                            <div id="errorPassword" class="mb-5">
+                            </div>
+                            <div>
+                                <button type="submit" class="mt-5 text-center btn btn-dark" data-bs-dismiss="modal">Iniciar Sesion</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
     </main>
     <footer class="pieDepagina">
         <ul class="menuFooter">

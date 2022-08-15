@@ -61,7 +61,7 @@
                     </li>
                 </ul>
                 </div>
-            </div>
+            </div> 
             </div>
         </div>
     </div>
@@ -71,7 +71,6 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="pages/nosotros.html">Sobre nosotros</a></li>
                 <li><a href="pages/contacto.html">Contactanos</a></li>
-                <li><a href="pages/crear.html">Crear Partido</a></li>
                 <li><a href="pages/partidos.html">Partidos</a></li>
                 <li><a href="pages/jugadores.html">Jugadores</a></li>
             </ul>
@@ -81,8 +80,8 @@
             </div>
         </nav>
     </header>
-    <main class="principal">
-        <div class="contenido">
+    <main class="principal ">
+        <div id="indexCrear" class="contenido">
             <h1>PadelSearch</h1>
             <h2>Tu buscador de partidos</h2>
             <p>Cansado de que tus amigos siempre te digan que si, pero a ultimo moemtno te cancelen?</p>
@@ -90,7 +89,51 @@
             <p>Tenemos tu solución. No busques en otra parte</p>
             </strong>
             <p>PadelSearch te ofrece la posibilidad de crear un partido de padel ingresando los jugadores faltantes y solo esperar a que alguien ingrese para organizar el partido</p>
-            <button class="crear"><a class="botonIndex" href="pages/crear.html">Crear partido</a></button>
+            
+        </div>
+
+
+        <!-- Formulario Creacion de partido -->
+
+        <div class="modal fade" tabindex="-1" id="staticBackdrop3" data-bs-backdrop="false" data-bs-keyboard="false" aria-labelledby="false"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body bg">
+                    <button type="button" class="btn-close float-end text-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    <form id="formularioCrear"
+                        class="col-auto p-5 text-center m-5 row justify-content-center rounded header">
+                        <label for="exampleInputName" class="form-label">Nombre</label>
+                        <input type="text" class="form-control bg-dark text-light mb-2" id="usuarioCrear" placeholder="Ingrese su Usuario">
+                        <div id="errorNombre" class="mb-5">
+                        </div>
+                        <label for="exampleInputTel" class="form-label">Telefono</label>
+                        <input type="number" class="form-control bg-dark text-light mb-2" id="telCrear" placeholder="Telefono">
+                        <div id="errorTel" class="mb-5">
+                        </div>
+
+                        <label for="exampleInputCant" class="form-label">Cantidad de jugadores</label>
+                        <input type="number" class="form-control bg-dark text-light mb-2" id="cantidad">
+                        <div id="errorCant" class="mb-5">
+                        </div>
+
+                        <label for="exampleInputNivel" class="form-label">Nivel de Jugadores</label>
+                        <input type="number" class="form-control bg-dark text-light mb-2" id="nivel">
+                        <div id="errorNivel" class="mb-5">
+                        </div>
+                        <label for="exampleInput" class="form-label">Localidad</label>
+                        <input type="text" class="form-control bg-dark text-light mb-2" id="localidad">
+                        <div id="errorLocalidad" class="mb-5">
+                        </div>
+                        <div>
+                            <button id="btnCrear" type="submit" class="mt-5 text-center btn btn-dark" data-bs-dismiss="modal">Crear Partido</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
         </div>
 
         <!-- Formulario Registro -->
@@ -103,19 +146,15 @@
                     <button type="button" class="btn-close float-end text-white" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                     <form id="formularioRegistro"
-                        class="col-auto p-5 text-center m-5 row justify-content-center rounded border border-dark header">
+                        class="col-auto p-5 text-center m-5 row justify-content-center rounded header">
                         <label for="exampleInputNombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control bg-dark text-light mb-2" id="nombre"
-                            aria-describedby="emailHelp">
+                        <input type="text" class="form-control bg-dark text-light mb-2" id="nombre">
                         <label for="exampleInputApellido" class="form-label">Apellido</label>
-                        <input type="text" class="form-control bg-dark text-light mb-2" id="apellido"
-                            aria-describedby="emailHelp">
+                        <input type="text" class="form-control bg-dark text-light mb-2" id="apellido">
                         <label for="exampleInputPhone" class="form-label">Telefono</label>
-                        <input type="number" class="form-control bg-dark text-light mb-2" id="telefono"
-                            aria-describedby="emailHelp">
+                        <input type="number" class="form-control bg-dark text-light mb-2" id="telefono">
                         <label for="exampleInputEmail" class="form-label">Email</label>
-                        <input type="email" class="form-control bg-dark text-light mb-2" id="emailReg"
-                            aria-describedby="emailHelp">
+                        <input type="email" class="form-control bg-dark text-light mb-2" id="emailReg">
                         <label for="exampleInputPassword" class="form-label">Password</label>
                         <input type="password" class="form-control bg-dark text-light" id="passwordReg">
                         <div class="form-check">
@@ -151,13 +190,13 @@
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-body bg-primary">
+                <div class="modal-body bg">
                     <button type="button" class="btn-close float-end text-white" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                     <form id="formularioLog"
-                        class="col-auto p-5 text-center m-5 row justify-content-center rounded border border-dark header">
+                        class="col-auto p-5 text-center m-5 row justify-content-center rounded header">
                         <label for="exampleInputEmail1" class="form-label">Email</label>
-                        <input type="email" class="form-control bg-dark text-light mb-2" id="email"
+                        <input id="email" type="email" class="form-control bg-dark text-light mb-2" 
                             aria-describedby="emailHelp">
                         <div id="errorEmail" class="mb-5">
                         </div>
@@ -190,6 +229,7 @@
             </div>
     </footer>
     <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/crear.js"></script>
     <script src="js/reg.js"></script>
     <script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>

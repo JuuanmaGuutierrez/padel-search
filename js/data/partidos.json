@@ -1,0 +1,34 @@
+[
+    {
+        "id" : 0,
+        "usuario" : "Pedro",
+        "tel" : 12345678,
+        "cantidad" : 4,
+        "nivel" : 2,
+        "localidad" : "mar del plata"
+    },
+    {
+        "id" : 1,
+        "usuario" : "Juan",
+        "tel" : 12345678,
+        "cantidad" : 4,
+        "nivel" : 3,
+        "localidad" : "mar del plata"
+    },
+    {
+        "id" : 2,
+        "usuario" : "Ramon",
+        "tel" : 12345678,
+        "cantidad" : 3,
+        "nivel" : 1,
+        "localidad" : "batan"
+    },
+    {
+        "id" : 3,
+        "usuario" : "Marcos",
+        "tel" : 12345678,
+        "cantidad" : 1,
+        "nivel" : 3,
+        "localidad" : "miramar"
+    }
+]

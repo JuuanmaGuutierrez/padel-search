@@ -36,8 +36,8 @@ formReg.addEventListener('submit', (e) => {
 
     let usuarioNuevo = new usuariosCreador(nombre, apellido, telefono, email, password);
     usuarios.push(usuarioNuevo);
+    console.log(usuarios);
     const subirUsuario = (clave, valor) => {
-        localStorage.clear();
         localStorage.setItem(clave, valor);
     }
     subirUsuario ('usuario', JSON.stringify(usuarios));
@@ -45,6 +45,12 @@ formReg.addEventListener('submit', (e) => {
 
 
 // Formulario Logueo
+
+const formLog = document.getElementById('formularioLog');
+
+formLog.addEventListener('submit', (e) => {
+    e.preventDefault();
+
 
 const email = document.getElementById('email');
 const password = document.getElementById('password');
@@ -58,9 +64,6 @@ if (email.value.length > 0 && email.value.includes ('@') && email.value.includes
     error.innerHTML = '<h5 class="text-danger"> Email incorrecto</h5>';
 }
 
-
-    //Me gustaria que estos console log hicieran el inner de arriba pero no lo logre hacer. Segun 
-    //entendi solo puede asignarse una linea de codigo con el operador ternario
 
 const error = (email.value.length > 0 && email.value.includes ('@') && email.value.includes('.')) ? true : false;
 error ? console.log('email correcto') : console.log('email incorrecto');
@@ -79,11 +82,42 @@ password.addEventListener('blur', () => {
 
     const error = (password.value.length >= 6 ) ? true : false;
     error ? console.log('contraseña correcta') : console.log('contraseña inorrecta');
-
-    // const error = (password.value.length >= 6 ) ? true : false;
-    // error.innerHTML = '<h5 class="text-success"> Password Correcto </h5>' : error.innerHTML = '<h5 class="text-danger"> Password incorrecto</h5>';
-
-
-
     
+});
+
+const emailDb = email.value
+const passDb = password.value
+
+const dbUsuarios = JSON.parse(localStorage.getItem('usuario'));
+validacionEmail = dbUsuarios.find(usuario =>  usuario.email == emailDb);
+validacionPass = dbUsuarios.find(usuario => usuario.password == passDb);
+console.log(validacionEmail);
+console.log(validacionPass);
+if (validacionEmail && validacionPass) {
+
+    swal({
+        title: 'Inicio de sesion correcto',
+        icon: 'success',
+        confirm: 'Ok!'
+    })
+    const contBtn = document.getElementById('indexCrear');
+    const btn =  '<button id="botonCrear" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">Crear Partido</button>'
+        
+    
+        contBtn.innerHTML = `
+                            <h1>PadelSearch</h1>
+                            <h2>Tu buscador de partidos</h2>
+                            <p>Cansado de que tus amigos siempre te digan que si, pero a ultimo moemtno te cancelen?</p>
+                            <strong>
+                            <p>Tenemos tu solución. No busques en otra parte</p>
+                            </strong>
+                            <p>PadelSearch te ofrece la posibilidad de crear un partido de padel ingresando los jugadores faltantes y solo esperar a que alguien ingrese para organizar el partido</p>
+                            <button id="botonCrear" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">Crear Partido</button>`
+    } else {
+    swal({
+        title: 'Error al iniciar session',
+        icon: 'error',
+        confirm: 'Ok!'
+    })
+}
 });
